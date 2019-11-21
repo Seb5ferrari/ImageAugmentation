@@ -21,6 +21,7 @@ def horizontal_flip(image_array):
     # horizontal flip doesn't need skimage, it's easy as flipping the image array of pixels !
     return image_array[:, ::-1]
 
+parser = argparse.ArgumentParser(description = "enter the path")
 parser.add_argument("--direct",help='enter the path')
 args = parser.parse_args()
 data_directory = args.direct
