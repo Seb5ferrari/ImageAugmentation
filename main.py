@@ -31,9 +31,8 @@ data = os.listdir(data_directory)
 for i in data:
     os.chdir(data_directory)
     images = os.listdir(i)
-    os.chdir(data_directory+i)
     for step, img in enumerate(images):
-        os.chdir("/media/data_dump/hemant/data/image_net/test"+i)
+        os.chdir(args.direct+i)
         image = sk.io.imread(img)
 
         # Randomly choosing how many time to do 
