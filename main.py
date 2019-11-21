@@ -5,7 +5,7 @@ import skimage as sk
 from skimage import transform
 from skimage import util
 import numpy as np
-
+import argparse
 import os
 
 def random_rotation(image_array):
@@ -21,8 +21,9 @@ def horizontal_flip(image_array):
     # horizontal flip doesn't need skimage, it's easy as flipping the image array of pixels !
     return image_array[:, ::-1]
 
-
-data_directory = "/media/data_dump/hemant/data/image_net/test/"
+parser.add_argument("--direct",help='enter the path')
+args = parser.parse_args()
+data_directory = args.direct
 
 data = os.listdir(data_directory)
 
